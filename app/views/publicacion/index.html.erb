@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>titulo</th>
+      <th>contenido</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publicaciones.each do |publicacion| %>
+      <tr>
+        <td><%= publicacion.titulo %></td>
+        <td><%= publicacion.contenido %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Nueva publicación', publicacion_new_path %>
