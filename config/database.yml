@@ -7,7 +7,7 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  database: test
+  database: shc
   username: root
   password: paramore
   host: 127.0.0.1

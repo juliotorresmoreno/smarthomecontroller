@@ -1,0 +1,2 @@
+class IncidencesTracking < ApplicationRecord
+end

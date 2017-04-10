@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Petition Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Petition type</th>
+      <th>State</th>
+      <th>Name</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petition_types.each do |petition_type| %>
+      <tr>
+        <td><%= petition_type.petition_type_id %></td>
+        <td><%= petition_type.state %></td>
+        <td><%= petition_type.name %></td>
+        <td><%= petition_type.created_at %></td>
+        <td><%= petition_type.update_at %></td>
+        <td><%= petition_type.delete_at %></td>
+        <td><%= link_to 'Show', petition_type %></td>
+        <td><%= link_to 'Edit', edit_petition_type_path(petition_type) %></td>
+        <td><%= link_to 'Destroy', petition_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Petition Type', new_petition_type_path %>

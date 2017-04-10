@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recovery Passwords</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recovery password</th>
+      <th>State</th>
+      <th>User</th>
+      <th>Token</th>
+      <th>Progress</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recovery_passwords.each do |recovery_password| %>
+      <tr>
+        <td><%= recovery_password.recovery_password_id %></td>
+        <td><%= recovery_password.state %></td>
+        <td><%= recovery_password.user_id %></td>
+        <td><%= recovery_password.token %></td>
+        <td><%= recovery_password.progress %></td>
+        <td><%= recovery_password.created_at %></td>
+        <td><%= recovery_password.update_at %></td>
+        <td><%= recovery_password.delete_at %></td>
+        <td><%= link_to 'Show', recovery_password %></td>
+        <td><%= link_to 'Edit', edit_recovery_password_path(recovery_password) %></td>
+        <td><%= link_to 'Destroy', recovery_password, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recovery Password', new_recovery_password_path %>

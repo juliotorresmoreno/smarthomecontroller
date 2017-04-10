@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  incidence_id: 1
+  state: 1
+  title: MyString
+  description: MyString
+  incidence_type_id: 1
+  progress: MyString
+  created_at: 2017-04-10 10:01:09
+  update_at: 2017-04-10 10:01:09
+  delete_at: 2017-04-10 10:01:09
+
+two:
+  incidence_id: 1
+  state: 1
+  title: MyString
+  description: MyString
+  incidence_type_id: 1
+  progress: MyString
+  created_at: 2017-04-10 10:01:09
+  update_at: 2017-04-10 10:01:09
+  delete_at: 2017-04-10 10:01:09

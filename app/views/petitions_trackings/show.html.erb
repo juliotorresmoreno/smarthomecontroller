@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Petition tracking:</strong>
+  <%= @petitions_tracking.petition_tracking_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @petitions_tracking.state %>
+</p>
+
+<p>
+  <strong>Petition:</strong>
+  <%= @petitions_tracking.petition_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @petitions_tracking.user_id %>
+</p>
+
+<p>
+  <strong>Comemnt:</strong>
+  <%= @petitions_tracking.comemnt %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @petitions_tracking.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @petitions_tracking.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @petitions_tracking.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_petitions_tracking_path(@petitions_tracking) %> |
+<%= link_to 'Back', petitions_trackings_path %>

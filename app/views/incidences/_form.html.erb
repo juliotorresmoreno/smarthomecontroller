@@ -1,0 +1,62 @@
+<%= form_for(incidence) do |f| %>
+  <% if incidence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incidence.errors.count, "error") %> prohibited this incidence from being saved:</h2>
+
+      <ul>
+      <% incidence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :incidence_id %>
+    <%= f.number_field :incidence_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.number_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :incidence_type_id %>
+    <%= f.number_field :incidence_type_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :progress %>
+    <%= f.text_field :progress %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :update_at %>
+    <%= f.datetime_select :update_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delete_at %>
+    <%= f.datetime_select :delete_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

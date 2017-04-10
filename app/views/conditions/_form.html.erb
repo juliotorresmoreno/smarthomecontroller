@@ -1,0 +1,57 @@
+<%= form_for(condition) do |f| %>
+  <% if condition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(condition.errors.count, "error") %> prohibited this condition from being saved:</h2>
+
+      <ul>
+      <% condition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :condition_id %>
+    <%= f.number_field :condition_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :schedule_id %>
+    <%= f.number_field :schedule_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :condition %>
+    <%= f.text_field :condition %>
+  </div>
+
+  <div class="field">
+    <%= f.label :condition_type %>
+    <%= f.text_field :condition_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :update_at %>
+    <%= f.datetime_select :update_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delete_at %>
+    <%= f.datetime_select :delete_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

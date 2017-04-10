@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Petitions Trackings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Petition tracking</th>
+      <th>State</th>
+      <th>Petition</th>
+      <th>User</th>
+      <th>Comemnt</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petitions_trackings.each do |petitions_tracking| %>
+      <tr>
+        <td><%= petitions_tracking.petition_tracking_id %></td>
+        <td><%= petitions_tracking.state %></td>
+        <td><%= petitions_tracking.petition_id %></td>
+        <td><%= petitions_tracking.user_id %></td>
+        <td><%= petitions_tracking.comemnt %></td>
+        <td><%= petitions_tracking.created_at %></td>
+        <td><%= petitions_tracking.update_at %></td>
+        <td><%= petitions_tracking.delete_at %></td>
+        <td><%= link_to 'Show', petitions_tracking %></td>
+        <td><%= link_to 'Edit', edit_petitions_tracking_path(petitions_tracking) %></td>
+        <td><%= link_to 'Destroy', petitions_tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Petitions Tracking', new_petitions_tracking_path %>

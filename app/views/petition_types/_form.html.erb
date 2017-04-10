@@ -1,0 +1,47 @@
+<%= form_for(petition_type) do |f| %>
+  <% if petition_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(petition_type.errors.count, "error") %> prohibited this petition_type from being saved:</h2>
+
+      <ul>
+      <% petition_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :petition_type_id %>
+    <%= f.number_field :petition_type_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.number_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :update_at %>
+    <%= f.datetime_select :update_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delete_at %>
+    <%= f.datetime_select :delete_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

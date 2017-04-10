@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  component_id: 1
+  state: 1
+  name: MyString
+  created_at: 2017-04-10 10:01:04
+  update_at: 2017-04-10 10:01:04
+  delete_at: 2017-04-10 10:01:04
+
+two:
+  component_id: 1
+  state: 1
+  name: MyString
+  created_at: 2017-04-10 10:01:04
+  update_at: 2017-04-10 10:01:04
+  delete_at: 2017-04-10 10:01:04

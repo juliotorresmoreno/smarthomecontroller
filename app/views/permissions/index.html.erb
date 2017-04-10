@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Permissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Permission</th>
+      <th>State</th>
+      <th>User</th>
+      <th>Operation</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @permissions.each do |permission| %>
+      <tr>
+        <td><%= permission.permission_id %></td>
+        <td><%= permission.state %></td>
+        <td><%= permission.user_id %></td>
+        <td><%= permission.operation_id %></td>
+        <td><%= permission.created_at %></td>
+        <td><%= permission.update_at %></td>
+        <td><%= permission.delete_at %></td>
+        <td><%= link_to 'Show', permission %></td>
+        <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
+        <td><%= link_to 'Destroy', permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Permission', new_permission_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recovery password:</strong>
+  <%= @recovery_password.recovery_password_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @recovery_password.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @recovery_password.user_id %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @recovery_password.token %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @recovery_password.progress %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @recovery_password.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @recovery_password.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @recovery_password.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_recovery_password_path(@recovery_password) %> |
+<%= link_to 'Back', recovery_passwords_path %>

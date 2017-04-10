@@ -1,0 +1,2 @@
+class UsersDesc < ApplicationRecord
+end

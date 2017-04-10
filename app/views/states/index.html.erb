@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>States</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>State</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @states.each do |state| %>
+      <tr>
+        <td><%= state.state_id %></td>
+        <td><%= state.state %></td>
+        <td><%= state.name %></td>
+        <td><%= state.country_id %></td>
+        <td><%= state.created_at %></td>
+        <td><%= state.update_at %></td>
+        <td><%= state.delete_at %></td>
+        <td><%= link_to 'Show', state %></td>
+        <td><%= link_to 'Edit', edit_state_path(state) %></td>
+        <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State', new_state_path %>

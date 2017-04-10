@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @device.device_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @device.state %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @device.location_id %>
+</p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @device.UUID %>
+</p>
+
+<p>
+  <strong>State onoff:</strong>
+  <%= @device.state_onoff %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @device.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @device.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @device.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Incidences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Incidence</th>
+      <th>State</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Incidence type</th>
+      <th>Progress</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incidences.each do |incidence| %>
+      <tr>
+        <td><%= incidence.incidence_id %></td>
+        <td><%= incidence.state %></td>
+        <td><%= incidence.title %></td>
+        <td><%= incidence.description %></td>
+        <td><%= incidence.incidence_type_id %></td>
+        <td><%= incidence.progress %></td>
+        <td><%= incidence.created_at %></td>
+        <td><%= incidence.update_at %></td>
+        <td><%= incidence.delete_at %></td>
+        <td><%= link_to 'Show', incidence %></td>
+        <td><%= link_to 'Edit', edit_incidence_path(incidence) %></td>
+        <td><%= link_to 'Destroy', incidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incidence', new_incidence_path %>

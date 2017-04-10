@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Permission:</strong>
+  <%= @permission.permission_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @permission.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @permission.user_id %>
+</p>
+
+<p>
+  <strong>Operation:</strong>
+  <%= @permission.operation_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @permission.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @permission.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @permission.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_permission_path(@permission) %> |
+<%= link_to 'Back', permissions_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Consumption:</strong>
+  <%= @consumption.consumption_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @consumption.state %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @consumption.device_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @consumption.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @consumption.time %>
+</p>
+
+<p>
+  <strong>Consumption:</strong>
+  <%= @consumption.consumption %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @consumption.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @consumption.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @consumption.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_consumption_path(@consumption) %> |
+<%= link_to 'Back', consumptions_path %>

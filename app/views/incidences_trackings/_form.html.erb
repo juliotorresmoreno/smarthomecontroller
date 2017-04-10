@@ -1,0 +1,57 @@
+<%= form_for(incidences_tracking) do |f| %>
+  <% if incidences_tracking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incidences_tracking.errors.count, "error") %> prohibited this incidences_tracking from being saved:</h2>
+
+      <ul>
+      <% incidences_tracking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :incidence_tracking_id %>
+    <%= f.number_field :incidence_tracking_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.number_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :incidence_id %>
+    <%= f.number_field :incidence_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :update_at %>
+    <%= f.datetime_select :update_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delete_at %>
+    <%= f.datetime_select :delete_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

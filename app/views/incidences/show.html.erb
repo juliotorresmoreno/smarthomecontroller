@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incidence:</strong>
+  <%= @incidence.incidence_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @incidence.state %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @incidence.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @incidence.description %>
+</p>
+
+<p>
+  <strong>Incidence type:</strong>
+  <%= @incidence.incidence_type_id %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @incidence.progress %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @incidence.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @incidence.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @incidence.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_incidence_path(@incidence) %> |
+<%= link_to 'Back', incidences_path %>

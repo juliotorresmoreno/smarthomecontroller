@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @schedule.schedule_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @schedule.state %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @schedule.device_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @schedule.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @schedule.time %>
+</p>
+
+<p>
+  <strong>Repetition:</strong>
+  <%= @schedule.repetition %>
+</p>
+
+<p>
+  <strong>Interval:</strong>
+  <%= @schedule.interval %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @schedule.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @schedule.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @schedule.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

@@ -1,0 +1,2 @@
+module PetitionTypesHelper
+end

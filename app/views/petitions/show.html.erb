@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Petition:</strong>
+  <%= @petition.petition_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @petition.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @petition.user_id %>
+</p>
+
+<p>
+  <strong>Petition type:</strong>
+  <%= @petition.petition_type_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @petition.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @petition.description %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @petition.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @petition.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @petition.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_petition_path(@petition) %> |
+<%= link_to 'Back', petitions_path %>

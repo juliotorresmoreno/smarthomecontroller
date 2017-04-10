@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incidence tracking:</strong>
+  <%= @incidences_tracking.incidence_tracking_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @incidences_tracking.state %>
+</p>
+
+<p>
+  <strong>Incidence:</strong>
+  <%= @incidences_tracking.incidence_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @incidences_tracking.user_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @incidences_tracking.comment %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @incidences_tracking.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @incidences_tracking.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @incidences_tracking.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_incidences_tracking_path(@incidences_tracking) %> |
+<%= link_to 'Back', incidences_trackings_path %>

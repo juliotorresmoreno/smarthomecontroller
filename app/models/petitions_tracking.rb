@@ -1,0 +1,2 @@
+class PetitionsTracking < ApplicationRecord
+end

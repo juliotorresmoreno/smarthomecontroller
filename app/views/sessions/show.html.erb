@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @session.session_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @session.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @session.user_id %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @session.token %>
+</p>
+
+<p>
+  <strong>Expires:</strong>
+  <%= @session.expires %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @session.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @session.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @session.delete_at %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

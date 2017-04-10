@@ -1,0 +1,62 @@
+<%= form_for(consumption) do |f| %>
+  <% if consumption.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(consumption.errors.count, "error") %> prohibited this consumption from being saved:</h2>
+
+      <ul>
+      <% consumption.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :consumption_id %>
+    <%= f.number_field :consumption_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.number_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :device_id %>
+    <%= f.number_field :device_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.time_select :time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :consumption %>
+    <%= f.text_field :consumption %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :update_at %>
+    <%= f.datetime_select :update_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delete_at %>
+    <%= f.datetime_select :delete_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
