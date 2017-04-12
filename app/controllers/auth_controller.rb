@@ -44,10 +44,15 @@ class AuthController < ApplicationController
             password = self.password
             decrypt = encrypted.decrypt(:symmetric, :algorithm => 'des-ecb', :password => password)
             if decrypt == params[:password]
-                redirect_to '/'                
+                session[:userid] = @user.id
+                render 'home/login', locals: { :errors => [] }
+                return
             end
         end
         render 'home/login', locals: { :errors => ["Email El usuario o la contraseña no son validos."] }
+    end
+    def session
+        render 'home/login', locals: { :errors => [session[:userid]] }
     end
     def password
         return "paramore"

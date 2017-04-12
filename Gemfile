@@ -59,3 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'encrypted_strings'
+gem 'redis', '~>3.2'
+gem 'json'
+gem 'devise'
