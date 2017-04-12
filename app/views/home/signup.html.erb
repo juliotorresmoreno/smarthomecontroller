@@ -1,0 +1,29 @@
+<script>$("#signup").addClass("active")</script>
+<div class="container form-signin">
+    <%= form_tag do %>
+        <h2 class="form-signin-heading">Registrate</h2>
+
+        <label class="sr-only margin10">Nombres</label>
+        <input type="text" class="form-control" placeholder="Nombres" name="name" required autofocus value="julio">
+
+        <label class="sr-only">Apellidos</label>
+        <input type="text" class="form-control" placeholder="Apellidos" name="lastname" required value="torres">
+
+        <label class="sr-only">Email address</label>
+        <input type="email" class="form-control" placeholder="Email address" name="email" required value="jtorres990@gmail.com">
+        <% if !(defined?(email)).nil? %>       
+            <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{email}" %></div>
+        <% end %>
+
+        <label class="sr-only">Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password" required value="123456">
+        <% if !(defined?(password)).nil? %>       
+            <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{password}" %></div>
+        <% end %>
+
+        <label class="sr-only">Confirmar password</label>
+        <input type="password" class="form-control" placeholder="Confirmar Password" name="password_confirm" required value="123456">
+        
+        <button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>
+    <% end %>
+</div> <!-- /container -->

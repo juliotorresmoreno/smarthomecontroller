@@ -14,6 +14,9 @@
       <th>Cell phone</th>
       <th>Birth date</th>
       <th>User</th>
+      <th>Created at</th>
+      <th>Update at</th>
+      <th>Delete at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +33,9 @@
         <td><%= users_desc.cell_phone %></td>
         <td><%= users_desc.birth_date %></td>
         <td><%= users_desc.user_id %></td>
+        <td><%= users_desc.created_at %></td>
+        <td><%= users_desc.update_at %></td>
+        <td><%= users_desc.delete_at %></td>
         <td><%= link_to 'Show', users_desc %></td>
         <td><%= link_to 'Edit', edit_users_desc_path(users_desc) %></td>
         <td><%= link_to 'Destroy', users_desc, method: :delete, data: { confirm: 'Are you sure?' } %></td>

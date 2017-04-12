@@ -59,5 +59,5 @@ function getCommand($conn, $table)
 
 $tables = getTables($conn);
 foreach ($tables as $table) {
-    exec(getCommand($conn, $table));
+    echo(getCommand($conn, $table));
 }

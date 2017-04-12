@@ -45,5 +45,20 @@
   <%= @users_desc.user_id %>
 </p>
 
+<p>
+  <strong>Created at:</strong>
+  <%= @users_desc.created_at %>
+</p>
+
+<p>
+  <strong>Update at:</strong>
+  <%= @users_desc.update_at %>
+</p>
+
+<p>
+  <strong>Delete at:</strong>
+  <%= @users_desc.delete_at %>
+</p>
+
 <%= link_to 'Edit', edit_users_desc_path(@users_desc) %> |
 <%= link_to 'Back', users_descs_path %>

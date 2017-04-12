@@ -69,6 +69,6 @@ class UsersDescsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def users_desc_params
-      params.require(:users_desc).permit(:user_desc_id, :state, :sex_id, :city_residence_id, :phone, :address, :cell_phone, :birth_date, :user_id)
+      params.require(:users_desc).permit(:user_desc_id, :state, :sex_id, :city_residence_id, :phone, :address, :cell_phone, :birth_date, :user_id, :created_at, :update_at, :delete_at)
     end
 end
