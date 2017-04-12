@@ -5,10 +5,10 @@ class HomeController < ApplicationController
     render :about
   end
   def login
-    render :login
+    render :login, locals: {:errors => []}
   end
   def signup
-    render :signup
+    render :signup, locals: {:errors => []}
   end
   def contact
     @status = 'contact'

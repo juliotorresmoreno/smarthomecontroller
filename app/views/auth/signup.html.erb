@@ -1,2 +1,5 @@
 <script>$("#signup").addClass("active")</script>
-<%= mensaje %>
+
+<% if defined?(mensaje) %>
+<%= "#{mensaje}" %>
+<% end %>

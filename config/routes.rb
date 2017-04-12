@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'login', :to => "home#login"
   get 'signup', :to => "home#signup"
 
+  post 'login', :to => "auth#login"
   post 'signup', :to => "auth#signup"
 
   resources :states

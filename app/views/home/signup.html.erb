@@ -11,14 +11,18 @@
 
         <label class="sr-only">Email address</label>
         <input type="email" class="form-control" placeholder="Email address" name="email" required value="jtorres990@gmail.com">
-        <% if !(defined?(email)).nil? %>       
-            <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{email}" %></div>
+        <% errors.each do |message| %>
+            <% if (message =~ %r"Email") == 0 %>
+                <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{message}" %></div>
+            <% end %>
         <% end %>
 
         <label class="sr-only">Password</label>
         <input type="password" class="form-control" placeholder="Password" name="password" required value="123456">
-        <% if !(defined?(password)).nil? %>       
-            <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{password}" %></div>
+        <% errors.each do |message| %>
+            <% if (message =~ %r"Password") == 0 %>
+                <div class="alert alert-danger" style="height: auto" role="alert"><%= "#{message}" %></div>
+            <% end %>
         <% end %>
 
         <label class="sr-only">Confirmar password</label>
