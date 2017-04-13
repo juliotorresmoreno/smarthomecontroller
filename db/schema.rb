@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412181259) do
+ActiveRecord::Schema.define(version: 20170413010145) do
 
   create_table "actions", primary_key: "accion_id", id: :bigint, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "state",      limit: 1,   default: 1,                          null: false
@@ -239,6 +239,9 @@ ActiveRecord::Schema.define(version: 20170412181259) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer  "perfil_id",              default: 0,  null: false
+    t.string   "name",                   default: "", null: false
+    t.string   "lastname",               default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

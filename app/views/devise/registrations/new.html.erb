@@ -1,0 +1,25 @@
+<script>$("#signup").addClass("active")</script>
+<div class="container form-signin">
+    <%= form_tag("/users") do %>
+        <h2 class="form-signin-heading">Registrate</h2>
+
+        <%= devise_error_messages! %>
+
+        <label class="sr-only margin10">Nombres</label>
+        <input type="text" class="form-control" placeholder="Nombres" name="user[name]" required autofocus value="julio">
+
+        <label class="sr-only">Apellidos</label>
+        <input type="text" class="form-control" placeholder="Apellidos" name="user[lastname]" required value="torres">
+
+        <label class="sr-only">Email address</label>
+        <input type="email" class="form-control" placeholder="Email address" name="user[email]" required value="jtorres990@gmail.com">
+
+        <label class="sr-only">Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="user[password]" required value="123456">
+
+        <label class="sr-only">Confirmar password</label>
+        <input type="password" class="form-control" placeholder="Confirmar Password" name="user[password_confirmation]" required value="123456">
+        
+        <button class="btn btn-lg btn-success btn-block" type="submit">Continuar</button>
+    <% end %>
+</div> <!-- /container -->
