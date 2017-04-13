@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :users_descs
   root :to => "home#index"
   get 'about', :to => "home#about"
   get 'contact', :to => "home#contact"
@@ -9,6 +7,7 @@ Rails.application.routes.draw do
 
   post 'login', :to => "auth#login"
   post 'signup', :to => "auth#signup"
+  get 'session', :to => "auth#auth"
 
   resources :states
   resources :sessions
@@ -33,6 +32,7 @@ Rails.application.routes.draw do
   resources :components
   resources :cities
   resources :posts
-
+  resources :users
+  resources :users_descs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

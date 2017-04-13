@@ -39,20 +39,35 @@ class AuthController < ApplicationController
         end
     end
     def login
+        require 'json'
+        redis = Redis.new
         if @user = User.where("email = '#{params[:email]}'").first
             encrypted = @user.password
             password = self.password
             decrypt = encrypted.decrypt(:symmetric, :algorithm => 'des-ecb', :password => password)
             if decrypt == params[:password]
-                session[:userid] = @user.id
-                render 'home/login', locals: { :errors => [] }
+                token = self.token
+                data = {:id => @user.id }
+                redis.set(token, data.to_json)
+                response.set_header("Set-Cookie", "token=" + token + "; ") # + "; path=/; HttpOnly")
+                redirect_to '/session'
                 return
             end
         end
         render 'home/login', locals: { :errors => ["Email El usuario o la contraseña no son validos."] }
     end
-    def session
-        render 'home/login', locals: { :errors => [session[:userid]] }
+    def auth
+        require 'json'
+        redis = Redis.new
+        data  = redis.get(cookies[:token])
+        render 'signup', locals: { :mensaje => data}
+    end
+    def token
+        result = ""
+        for value in 1..50 do
+            result += rand(65..90).chr
+        end
+        return result
     end
     def password
         return "paramore"
