@@ -12,43 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :device_id %>
-    <%= f.number_field :device_id %>
+    <label for="device_device_id">ID</label>
+    <%= f.number_field :device_id, class:"form-control", :readonly => 'readonly' %>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
-    <%= f.number_field :state %>
+    <label for="device_location_id">Ubicacion</label>
+    <%= f.select :location_id, 
+      options_from_collection_for_select(Location.all, :id, :name, device.location_id), {}, 
+      {:class => "form-control"} %>
   </div>
 
   <div class="field">
-    <%= f.label :location_id %>
-    <%= f.number_field :location_id %>
+    <label for="device_UUID">UUID</label>
+    <%= f.text_field :UUID, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :UUID %>
-    <%= f.text_field :UUID %>
-  </div>
-
-  <div class="field">
-    <%= f.label :state_onoff %>
-    <%= f.number_field :state_onoff %>
-  </div>
-
-  <div class="field">
-    <%= f.label :created_at %>
-    <%= f.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :update_at %>
-    <%= f.datetime_select :update_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :delete_at %>
-    <%= f.datetime_select :delete_at %>
+    <label for="device_state_onoff">On/Off</label>
+    <%= f.number_field :state_onoff, class:"form-control", :readonly => 'readonly' %>
   </div>
 
   <div class="actions">

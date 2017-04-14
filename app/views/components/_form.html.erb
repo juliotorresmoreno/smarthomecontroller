@@ -12,34 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :module_id %>
-    <%= f.number_field :module_id %>
+    <label for="component_module_id">ID</label>
+    <%= f.number_field :module_id, class:"form-control", :readonly => 'readonly' %>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
-    <%= f.number_field :state %>
+    <label for="component_name">Nombre</label>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :created_at %>
-    <%= f.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :update_at %>
-    <%= f.datetime_select :update_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :delete_at %>
-    <%= f.datetime_select :delete_at %>
-  </div>
 
   <div class="actions">
     <%= f.submit 'submit', :class => 'btn btn-success' %>

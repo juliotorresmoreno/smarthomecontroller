@@ -21,7 +21,7 @@
     <% @recovery_passwords.each do |recovery_password| %>
       <tr>
         <td><%= recovery_password.recovery_password_id %></td>
-        <td><%= recovery_password.state %></td>
+        
         <td><%= recovery_password.user_id %></td>
         <td><%= recovery_password.token %></td>
         <td><%= recovery_password.progress %></td>

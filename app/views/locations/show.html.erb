@@ -1,18 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Location:</strong>
+  <strong>ID:</strong>
   <%= @location.location_id %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @location.state %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @location.user_id %>
 </p>
 
 <p>
@@ -20,20 +10,6 @@
   <%= @location.name %>
 </p>
 
-<p>
-  <strong>Creado:</strong>
-  <%= @location.created_at %>
-</p>
-
-<p>
-  <strong>Modificado:</strong>
-  <%= @location.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @location.delete_at %>
-</p>
 
 <%= link_to 'Editar', edit_location_path(@location) %> |
 <%= link_to 'Atras', locations_path %>

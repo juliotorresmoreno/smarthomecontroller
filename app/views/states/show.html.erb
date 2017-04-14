@@ -1,39 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="container form-signin">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>State:</strong>
-  <%= @state.state_id %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @state.state_id %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @state.state %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @state.state %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @state.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @state.name %>
+  </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @state.country_id %>
-</p>
+  <p>
+    <strong>Country:</strong>
+    <%= @state.country_id %>
+  </p>
 
-<p>
-  <strong>Creado:</strong>
-  <%= @state.created_at %>
-</p>
+  <p>
+    <strong>Creado:</strong>
+    <%= @state.created_at %>
+  </p>
 
-<p>
-  <strong>Modificado:</strong>
-  <%= @state.update_at %>
-</p>
+  <p>
+    <strong>Modificado:</strong>
+    <%= @state.update_at %>
+  </p>
 
-<p>
-  <strong>Delete at:</strong>
-  <%= @state.delete_at %>
-</p>
+  <p>
+    <strong>Delete at:</strong>
+    <%= @state.delete_at %>
+  </p>
 
-<%= link_to 'Editar', edit_state_path(@state) %> |
-<%= link_to 'Atras', states_path %>
+  <%= link_to 'Editar', edit_state_path(@state) %> |
+  <%= link_to 'Atras', states_path %>
+
+</div>

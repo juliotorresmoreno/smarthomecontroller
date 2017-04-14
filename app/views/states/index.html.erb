@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>States</h1>
+<h1>Departamentos</h1>
 
 <table class="table">
   <thead>
     <tr>
-      
-      
-      <th>Name</th>
-      <th>Country</th>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Pais</th>
       <th>Creado</th>
       <th>Modificado</th>
       
@@ -20,13 +19,12 @@
     <% @states.each do |state| %>
       <tr>
         <td><%= state.state_id %></td>
-        <td><%= state.state %></td>
+        
         <td><%= state.name %></td>
-        <td><%= state.country_id %></td>
+        <td><%= state.country.name %></td>
         <td><%= state.created_at %></td>
         <td><%= state.update_at %></td>
         
-        <td><%= link_to 'Mostrar', state %></td>
         <td><%= link_to 'Editar', edit_state_path(state) %></td>
         <td><%= link_to 'Eliminar', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -36,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New State', new_state_path %>
+<%= link_to 'Nuevo departamento', new_state_path %>

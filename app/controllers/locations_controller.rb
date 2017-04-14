@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    @locations = Location.where("user_id = #{current_user.id}")
   end
 
   # GET /locations/1
@@ -69,6 +69,8 @@ class LocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def location_params
-      params.require(:location).permit(:location_id, :state, :user_id, :name, :created_at, :update_at, :delete_at)
+      result = params.require(:location).permit(:state, :name)
+      result[:user_id] = current_user.id
+      return result
     end
 end

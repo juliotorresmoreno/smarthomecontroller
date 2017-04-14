@@ -60,7 +60,7 @@ class AuthController < ApplicationController
         require 'json'
         redis = Redis.new
         data  = redis.get(cookies[:token])
-        render 'signup', locals: { :mensaje => data}
+        render 'signup', locals: { :mensaje => @currentUser = current_user.id}
     end
     def token
         result = ""

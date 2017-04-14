@@ -1,6 +1,7 @@
-<h1>Editing Country</h1>
+<h1>Editar pais</h1>
 
-<%= render 'form', country: @country %>
 
-<%= link_to 'Mostrar', @country %> |
-<%= link_to 'Atras', countries_path %>
+<div class="container form-signin">
+    <%= render 'form', country: @country %>
+    <%= link_to 'Atras', countries_path %>
+</div>

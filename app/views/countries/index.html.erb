@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Countries</h1>
+<h1>Paises</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Country</th>
+      <th>ID</th>
       
-      <th>Name</th>
+      <th>Nombre</th>
       <th>Creado</th>
       <th>Modificado</th>
       
@@ -19,7 +19,7 @@
     <% @countries.each do |country| %>
       <tr>
         <td><%= country.country_id %></td>
-        <td><%= country.state %></td>
+        
         <td><%= country.name %></td>
         <td><%= country.created_at %></td>
         <td><%= country.update_at %></td>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Country', new_country_path %>
+<%= link_to 'Nuevo pais', new_country_path %>

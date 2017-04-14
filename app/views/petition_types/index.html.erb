@@ -7,7 +7,7 @@
     <tr>
       <th>Petition type</th>
       
-      <th>Name</th>
+      <th>Nombre</th>
       <th>Creado</th>
       <th>Modificado</th>
       
@@ -19,7 +19,7 @@
     <% @petition_types.each do |petition_type| %>
       <tr>
         <td><%= petition_type.petition_type_id %></td>
-        <td><%= petition_type.state %></td>
+        
         <td><%= petition_type.name %></td>
         <td><%= petition_type.created_at %></td>
         <td><%= petition_type.update_at %></td>

@@ -12,18 +12,20 @@
   <% end %>
 
   <div class="field">
-    <label for="city_id">ID</label>
-    <input id="city_id" type="number" class="form-control" name="city[city_id]" readonly>
+    <label for="city_city_id">ID</label>
+    <%= f.number_field :city_id, class:"form-control", :readonly => 'readonly' %>
   </div>
 
   <div class="field">
     <label for="city_name">Nombre</label>
-    <input id="city_name" type="text" class="form-control" name="city[name]" required>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
   <div class="field">
     <label for="city_state_id">Departamento</label>
-    <input id="city_state_id" type="number" class="form-control" name="city[state_id]" required>
+      <%= f.select :state_id, 
+            options_from_collection_for_select(State.all, :id, :name, city.state_id), {}, 
+            {:class => "form-control"} %>
   </div>
 
   <div class="actions">
