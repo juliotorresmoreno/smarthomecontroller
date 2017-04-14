@@ -1,6 +1,7 @@
-<h1>Editing City</h1>
+<h1>Editar Ciudad</h1>
 
-<%= render 'form', city: @city %>
-
-<%= link_to 'Show', @city %> |
-<%= link_to 'Back', cities_path %>
+<div class="container form-signin">
+    <%= render 'form', city: @city %>
+    <%= link_to 'Mostrar', @city %> |
+    <%= link_to 'Atras', cities_path %>
+</div>

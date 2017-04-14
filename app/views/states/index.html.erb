@@ -5,13 +5,13 @@
 <table class="table">
   <thead>
     <tr>
-      <th>State</th>
-      <th>State</th>
+      
+      
       <th>Name</th>
       <th>Country</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,10 +25,10 @@
         <td><%= state.country_id %></td>
         <td><%= state.created_at %></td>
         <td><%= state.update_at %></td>
-        <td><%= state.delete_at %></td>
-        <td><%= link_to 'Show', state %></td>
-        <td><%= link_to 'Edit', edit_state_path(state) %></td>
-        <td><%= link_to 'Destroy', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', state %></td>
+        <td><%= link_to 'Editar', edit_state_path(state) %></td>
+        <td><%= link_to 'Eliminar', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

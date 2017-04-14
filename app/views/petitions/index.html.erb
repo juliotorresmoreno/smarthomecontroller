@@ -6,14 +6,14 @@
   <thead>
     <tr>
       <th>Petition</th>
-      <th>State</th>
+      
       <th>User</th>
       <th>Petition type</th>
       <th>Title</th>
       <th>Description</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,10 +29,10 @@
         <td><%= petition.description %></td>
         <td><%= petition.created_at %></td>
         <td><%= petition.update_at %></td>
-        <td><%= petition.delete_at %></td>
-        <td><%= link_to 'Show', petition %></td>
-        <td><%= link_to 'Edit', edit_petition_path(petition) %></td>
-        <td><%= link_to 'Destroy', petition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', petition %></td>
+        <td><%= link_to 'Editar', edit_petition_path(petition) %></td>
+        <td><%= link_to 'Eliminar', petition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

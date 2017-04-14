@@ -6,14 +6,14 @@
   <thead>
     <tr>
       <th>Consumption</th>
-      <th>State</th>
+      
       <th>Device</th>
       <th>Date</th>
       <th>Time</th>
       <th>Consumption</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,10 +29,10 @@
         <td><%= consumption.consumption %></td>
         <td><%= consumption.created_at %></td>
         <td><%= consumption.update_at %></td>
-        <td><%= consumption.delete_at %></td>
-        <td><%= link_to 'Show', consumption %></td>
-        <td><%= link_to 'Edit', edit_consumption_path(consumption) %></td>
-        <td><%= link_to 'Destroy', consumption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', consumption %></td>
+        <td><%= link_to 'Editar', edit_consumption_path(consumption) %></td>
+        <td><%= link_to 'Eliminar', consumption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

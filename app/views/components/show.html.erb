@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Component:</strong>
-  <%= @component.component_id %>
+  <strong>Module:</strong>
+  <%= @component.module_id %>
 </p>
 
 <p>
@@ -16,12 +16,12 @@
 </p>
 
 <p>
-  <strong>Created at:</strong>
+  <strong>Creado:</strong>
   <%= @component.created_at %>
 </p>
 
 <p>
-  <strong>Update at:</strong>
+  <strong>Modificado:</strong>
   <%= @component.update_at %>
 </p>
 
@@ -30,5 +30,5 @@
   <%= @component.delete_at %>
 </p>
 
-<%= link_to 'Edit', edit_component_path(@component) %> |
-<%= link_to 'Back', components_path %>
+<%= link_to 'Editar', edit_component_path(@component) %> |
+<%= link_to 'Atras', components_path %>

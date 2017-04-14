@@ -6,13 +6,13 @@
   <thead>
     <tr>
       <th>Petition tracking</th>
-      <th>State</th>
+      
       <th>Petition</th>
       <th>User</th>
       <th>Comemnt</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,10 +27,10 @@
         <td><%= petitions_tracking.comemnt %></td>
         <td><%= petitions_tracking.created_at %></td>
         <td><%= petitions_tracking.update_at %></td>
-        <td><%= petitions_tracking.delete_at %></td>
-        <td><%= link_to 'Show', petitions_tracking %></td>
-        <td><%= link_to 'Edit', edit_petitions_tracking_path(petitions_tracking) %></td>
-        <td><%= link_to 'Destroy', petitions_tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', petitions_tracking %></td>
+        <td><%= link_to 'Editar', edit_petitions_tracking_path(petitions_tracking) %></td>
+        <td><%= link_to 'Eliminar', petitions_tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

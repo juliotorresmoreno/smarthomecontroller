@@ -6,14 +6,14 @@
   <thead>
     <tr>
       <th>Incidence</th>
-      <th>State</th>
+      
       <th>Title</th>
       <th>Description</th>
       <th>Incidence type</th>
       <th>Progress</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,10 +29,10 @@
         <td><%= incidence.progress %></td>
         <td><%= incidence.created_at %></td>
         <td><%= incidence.update_at %></td>
-        <td><%= incidence.delete_at %></td>
-        <td><%= link_to 'Show', incidence %></td>
-        <td><%= link_to 'Edit', edit_incidence_path(incidence) %></td>
-        <td><%= link_to 'Destroy', incidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', incidence %></td>
+        <td><%= link_to 'Editar', edit_incidence_path(incidence) %></td>
+        <td><%= link_to 'Eliminar', incidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

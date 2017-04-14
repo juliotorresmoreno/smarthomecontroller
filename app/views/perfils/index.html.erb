@@ -6,11 +6,11 @@
   <thead>
     <tr>
       <th>Perfil</th>
-      <th>State</th>
+      
       <th>Name</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,10 +23,10 @@
         <td><%= perfil.name %></td>
         <td><%= perfil.created_at %></td>
         <td><%= perfil.update_at %></td>
-        <td><%= perfil.delete_at %></td>
-        <td><%= link_to 'Show', perfil %></td>
-        <td><%= link_to 'Edit', edit_perfil_path(perfil) %></td>
-        <td><%= link_to 'Destroy', perfil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', perfil %></td>
+        <td><%= link_to 'Editar', edit_perfil_path(perfil) %></td>
+        <td><%= link_to 'Eliminar', perfil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

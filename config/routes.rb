@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post 'signup', :to => "auth#signup"
   get 'session', :to => "auth#auth"
 
+  get 'system', :to => "system#index"
+
   resources :states
   resources :sessions
   resources :schedules

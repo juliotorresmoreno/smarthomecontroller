@@ -12,23 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :city_id %>
-    <input type="number" class="form-control" name="city[city_id]" required>
+    <label for="city_id">ID</label>
+    <input id="city_id" type="number" class="form-control" name="city[city_id]" readonly>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
-    <input type="number" class="form-control" name="city[state]" required>
+    <label for="city_name">Nombre</label>
+    <input id="city_name" type="text" class="form-control" name="city[name]" required>
   </div>
 
   <div class="field">
-    <%= f.label :name %>
-    <input type="text" class="form-control" name="city[name]" required>
-  </div>
-
-  <div class="field">
-    <%= f.label :state_id %>
-    <input type="number" class="form-control" name="city[state_id]" required>
+    <label for="city_state_id">Departamento</label>
+    <input id="city_state_id" type="number" class="form-control" name="city[state_id]" required>
   </div>
 
   <div class="actions">

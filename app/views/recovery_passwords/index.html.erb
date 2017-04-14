@@ -6,13 +6,13 @@
   <thead>
     <tr>
       <th>Recovery password</th>
-      <th>State</th>
+      
       <th>User</th>
       <th>Token</th>
       <th>Progress</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,10 +27,10 @@
         <td><%= recovery_password.progress %></td>
         <td><%= recovery_password.created_at %></td>
         <td><%= recovery_password.update_at %></td>
-        <td><%= recovery_password.delete_at %></td>
-        <td><%= link_to 'Show', recovery_password %></td>
-        <td><%= link_to 'Edit', edit_recovery_password_path(recovery_password) %></td>
-        <td><%= link_to 'Destroy', recovery_password, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', recovery_password %></td>
+        <td><%= link_to 'Editar', edit_recovery_password_path(recovery_password) %></td>
+        <td><%= link_to 'Eliminar', recovery_password, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

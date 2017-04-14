@@ -6,13 +6,13 @@
   <thead>
     <tr>
       <th>Incidence tracking</th>
-      <th>State</th>
+      
       <th>Incidence</th>
       <th>User</th>
       <th>Comment</th>
-      <th>Created at</th>
-      <th>Update at</th>
-      <th>Delete at</th>
+      <th>Creado</th>
+      <th>Modificado</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,10 +27,10 @@
         <td><%= incidences_tracking.comment %></td>
         <td><%= incidences_tracking.created_at %></td>
         <td><%= incidences_tracking.update_at %></td>
-        <td><%= incidences_tracking.delete_at %></td>
-        <td><%= link_to 'Show', incidences_tracking %></td>
-        <td><%= link_to 'Edit', edit_incidences_tracking_path(incidences_tracking) %></td>
-        <td><%= link_to 'Destroy', incidences_tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Mostrar', incidences_tracking %></td>
+        <td><%= link_to 'Editar', edit_incidences_tracking_path(incidences_tracking) %></td>
+        <td><%= link_to 'Eliminar', incidences_tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
