@@ -5,11 +5,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Device</th>
+      <th>ID</th>
       
-      <th>Location</th>
-      <th>Uuid</th>
-      <th>State onoff</th>
+      <th>Ubicacion</th>
+      <th>UUID</th>
+      <th>On/Off</th>
       <th>Creado</th>
       <th>Modificado</th>
       
@@ -22,13 +22,12 @@
       <tr>
         <td><%= device.device_id %></td>
         
-        <td><%= device.location_id %></td>
+        <td><%= device.location.name %></td>
         <td><%= device.UUID %></td>
         <td><%= device.state_onoff %></td>
         <td><%= device.created_at %></td>
         <td><%= device.update_at %></td>
         
-        <td><%= link_to 'Mostrar', device %></td>
         <td><%= link_to 'Editar', edit_device_path(device) %></td>
         <td><%= link_to 'Eliminar', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -38,4 +37,4 @@
 
 <br>
 
-<%= link_to 'New Device', new_device_path %>
+<%= link_to 'Nuevo dispositivo', new_device_path %>

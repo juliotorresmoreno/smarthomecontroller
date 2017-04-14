@@ -19,8 +19,10 @@
   <div class="field">
     <label for="device_location_id">Ubicacion</label>
     <%= f.select :location_id, 
-      options_from_collection_for_select(Location.all, :id, :name, device.location_id), {}, 
-      {:class => "form-control"} %>
+          options_from_collection_for_select(
+            Location.where("user_id = #{current_user.id}"
+          ), :id, :name, device.location_id), {}, 
+          {:class => "form-control"} %>
   </div>
 
   <div class="field">
