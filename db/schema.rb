@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170413010145) do
   end
 
   create_table "conditions", primary_key: "condition_id", id: :bigint, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "state",          limit: 65535,                                      null: false
+    t.integer  "state",          limit: 1,                                          null: false
     t.bigint   "schedule_id",                                                       null: false
     t.text     "condition",      limit: 65535,                                      null: false
     t.string   "condition_type", limit: 8,                                          null: false
@@ -239,7 +239,7 @@ ActiveRecord::Schema.define(version: 20170413010145) do
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "perfil_id",              default: 0,  null: false
+    t.integer  "perfil_id",              default: 2,  null: false
     t.string   "name",                   default: "", null: false
     t.string   "lastname",               default: "", null: false
     t.string   "email",                  default: "", null: false
@@ -275,21 +275,6 @@ ActiveRecord::Schema.define(version: 20170413010145) do
     t.index ["user_id"], name: "user_id", using: :btree
   end
 
-  create_table "users_old", primary_key: "user_id", id: :bigint, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.integer  "state",      limit: 1,   default: 1,                          null: false
-    t.string   "name",       limit: 100,                                      null: false
-    t.string   "lastname",   limit: 100,                                      null: false
-    t.string   "fullname",   limit: 200,                                      null: false
-    t.string   "email",      limit: 100,                                      null: false
-    t.string   "password",   limit: 100,                                      null: false
-    t.bigint   "perfil_id",                                                   null: false
-    t.datetime "created_at",             default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.datetime "update_at",              default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.datetime "delete_at"
-    t.index ["email"], name: "email", unique: true, using: :btree
-    t.index ["perfil_id"], name: "perfil_id", using: :btree
-  end
-
   add_foreign_key "actions", "modules", primary_key: "module_id", name: "actions_ibfk_1"
   add_foreign_key "cities", "states", primary_key: "state_id", name: "cities_ibfk_1"
   add_foreign_key "conditions", "schedules", primary_key: "schedule_id", name: "conditions_ibfk_1"
@@ -297,20 +282,20 @@ ActiveRecord::Schema.define(version: 20170413010145) do
   add_foreign_key "devices", "locations", primary_key: "location_id", name: "devices_ibfk_1"
   add_foreign_key "incidences", "incidence_type", primary_key: "incidence_type_id", name: "incidences_ibfk_1"
   add_foreign_key "incidences_tracking", "incidences", primary_key: "incidence_id", name: "incidences_tracking_ibfk_2"
-  add_foreign_key "incidences_tracking", "users_old", column: "user_id", primary_key: "user_id", name: "incidences_tracking_ibfk_1"
+  add_foreign_key "incidences_tracking", "users", column: "user_id", primary_key: "id", name: "incidences_tracking_ibfk_1"
   add_foreign_key "locations", "users_old", column: "user_id", primary_key: "user_id", name: "locations_ibfk_1"
   add_foreign_key "parameters_value", "parameters", primary_key: "parameter_id", name: "parameters_value_ibfk_1"
   add_foreign_key "permissions", "actions", column: "accion_id", primary_key: "accion_id", name: "permissions_ibfk_2"
-  add_foreign_key "permissions", "users_old", column: "user_id", primary_key: "user_id", name: "permissions_ibfk_1"
+  add_foreign_key "permissions", "users", column: "user_id", primary_key: "id", name: "permissions_ibfk_1"
   add_foreign_key "petitions", "petition_types", primary_key: "petition_type_id", name: "petitions_ibfk_2"
-  add_foreign_key "petitions", "users_old", column: "user_id", primary_key: "user_id", name: "petitions_ibfk_1"
+  add_foreign_key "petitions", "users", column: "user_id", primary_key: "id", name: "petitions_ibfk_1"
   add_foreign_key "petitions_tracking", "petitions", primary_key: "petition_id", name: "petitions_tracking_ibfk_1"
-  add_foreign_key "petitions_tracking", "users_old", column: "user_id", primary_key: "user_id", name: "petitions_tracking_ibfk_2"
-  add_foreign_key "recovery_passwords", "users_old", column: "user_id", primary_key: "user_id", name: "recovery_passwords_ibfk_1"
+  add_foreign_key "petitions_tracking", "users", column: "user_id", primary_key: "id", name: "petitions_tracking_ibfk_2"
+  add_foreign_key "recovery_passwords", "users", column: "user_id", primary_key: "id", name: "recovery_passwords_ibfk_1"
   add_foreign_key "schedules", "devices", primary_key: "device_id", name: "schedules_ibfk_1"
   add_foreign_key "states", "countries", primary_key: "country_id", name: "states_ibfk_1"
   add_foreign_key "users_desc", "cities", column: "city_residence_id", primary_key: "city_id", name: "users_desc_ibfk_3"
   add_foreign_key "users_desc", "parameters_value", column: "sex_id", primary_key: "parameter_value_id", name: "users_desc_ibfk_2"
   add_foreign_key "users_desc", "users_old", column: "user_id", primary_key: "user_id", name: "users_desc_ibfk_1"
-  add_foreign_key "users_old", "perfils", primary_key: "perfil_id", name: "users_old_ibfk_1"
+  add_foreign_key "users", "perfils", primary_key: "perfil_id", name: "users_ibfk_1"
 end
