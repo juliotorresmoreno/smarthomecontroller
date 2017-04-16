@@ -21,8 +21,8 @@
         <td><%= parameter.parameter_id %></td>
         
         <td><%= parameter.name %></td>
-        <td><%= parameter.created_at %></td>
-        <td><%= parameter.update_at %></td>
+        <td><%= parameter.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= parameter.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', parameter %></td>
         <td><%= link_to 'Editar', edit_parameter_path(parameter) %></td>

@@ -5,13 +5,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Operation</th>
-      
+      <th>ID</th>
       <th>Nombre</th>
-      <th>Component</th>
+      <th>Modulo</th>
       <th>Creado</th>
       <th>Modificado</th>
-      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,15 +17,12 @@
   <tbody>
     <% @operations.each do |operation| %>
       <tr>
-        <td><%= operation.operation_id %></td>
-        
+        <td><%= operation.accion_id %></td>
         <td><%= operation.name %></td>
-        <td><%= operation.component_id %></td>
-        <td><%= operation.created_at %></td>
-        <td><%= operation.update_at %></td>
-        
-        <td><%= link_to 'Mostrar', operation %></td>
-        <td><%= link_to 'Editar', edit_operation_path(operation) %></td>
+        <td><%= operation.module_id %></td>
+        <td><%= operation.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= operation.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= link_to 'Modificar', edit_operation_path(operation) %></td>
         <td><%= link_to 'Eliminar', operation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -36,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Operation', new_operation_path %>
+<%= link_to 'Nueva operación', new_operation_path %>

@@ -21,8 +21,8 @@
         <td><%= component.module_id %></td>
         
         <td><%= component.name %></td>
-        <td><%= component.created_at %></td>
-        <td><%= component.update_at %></td>
+        <td><%= component.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= component.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Editar', edit_component_path(component) %></td>
         <td><%= link_to 'Eliminar', component, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Operation:</strong>
-  <%= @operation.operation_id %>
+  <strong>Accion:</strong>
+  <%= @operation.accion_id %>
 </p>
 
 <p>
@@ -16,17 +16,17 @@
 </p>
 
 <p>
-  <strong>Component:</strong>
-  <%= @operation.component_id %>
+  <strong>Module:</strong>
+  <%= @operation.module_id %>
 </p>
 
 <p>
-  <strong>Creado:</strong>
+  <strong>Created at:</strong>
   <%= @operation.created_at %>
 </p>
 
 <p>
-  <strong>Modificado:</strong>
+  <strong>Update at:</strong>
   <%= @operation.update_at %>
 </p>
 
@@ -35,5 +35,5 @@
   <%= @operation.delete_at %>
 </p>
 
-<%= link_to 'Editar', edit_operation_path(@operation) %> |
-<%= link_to 'Atras', operations_path %>
+<%= link_to 'Edit', edit_operation_path(@operation) %> |
+<%= link_to 'Back', operations_path %>

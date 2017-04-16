@@ -5,3 +5,9 @@ label {
 .width-auto {
     width: auto !important
 }
+
+.form-data {
+  max-width: 330px;
+
+  margin: 0 !important;
+}

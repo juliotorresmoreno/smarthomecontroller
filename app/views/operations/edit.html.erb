@@ -1,6 +1,12 @@
-<h1>Editing Operation</h1>
+<h1>Editar Operación</h1>
 
-<%= render 'form', operation: @operation %>
 
-<%= link_to 'Mostrar', @operation %> |
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <%= render 'form', operation: @operation %>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    
+  </div>
+</div>
 <%= link_to 'Atras', operations_path %>

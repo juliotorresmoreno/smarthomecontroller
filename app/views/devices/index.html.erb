@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      
+
+      <th>Nombre</th>
       <th>Ubicacion</th>
       <th>UUID</th>
       <th>On/Off</th>
@@ -21,12 +22,13 @@
     <% @devices.each do |device| %>
       <tr>
         <td><%= device.device_id %></td>
-        
+
+        <td><%= device.name %></td>
         <td><%= device.location.name %></td>
         <td><%= device.UUID %></td>
         <td><%= device.state_onoff %></td>
-        <td><%= device.created_at %></td>
-        <td><%= device.update_at %></td>
+        <td><%= device.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= device.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Editar', edit_device_path(device) %></td>
         <td><%= link_to 'Eliminar', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>

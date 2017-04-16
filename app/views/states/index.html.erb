@@ -22,8 +22,8 @@
         
         <td><%= state.name %></td>
         <td><%= state.country.name %></td>
-        <td><%= state.created_at %></td>
-        <td><%= state.update_at %></td>
+        <td><%= state.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= state.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Editar', edit_state_path(state) %></td>
         <td><%= link_to 'Eliminar', state, method: :delete, data: { confirm: 'Are you sure?' } %></td>

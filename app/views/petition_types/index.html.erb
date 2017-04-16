@@ -21,8 +21,8 @@
         <td><%= petition_type.petition_type_id %></td>
         
         <td><%= petition_type.name %></td>
-        <td><%= petition_type.created_at %></td>
-        <td><%= petition_type.update_at %></td>
+        <td><%= petition_type.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= petition_type.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', petition_type %></td>
         <td><%= link_to 'Editar', edit_petition_type_path(petition_type) %></td>

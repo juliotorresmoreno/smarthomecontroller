@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Device:</strong>
+  <strong>ID:</strong>
   <%= @device.device_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @device.state %>
+  <strong>Nombre:</strong>
+  <%= @device.name %>
 </p>
 
 <p>
@@ -33,11 +33,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @device.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @device.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_device_path(@device) %> |

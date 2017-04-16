@@ -21,8 +21,8 @@
         
         <td><%= city.name %></td>
         <td><%= city.state.name %></td>
-        <td><%= city.created_at %></td>
-        <td><%= city.update_at %></td>
+        <td><%= city.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= city.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Editar', edit_city_path(city) %></td>
         <td><%= link_to 'Eliminar', city, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>

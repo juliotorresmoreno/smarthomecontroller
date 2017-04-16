@@ -33,8 +33,8 @@
         <td><%= users_desc.cell_phone %></td>
         <td><%= users_desc.birth_date %></td>
         <td><%= users_desc.user_id %></td>
-        <td><%= users_desc.created_at %></td>
-        <td><%= users_desc.update_at %></td>
+        <td><%= users_desc.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= users_desc.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', users_desc %></td>
         <td><%= link_to 'Editar', edit_users_desc_path(users_desc) %></td>

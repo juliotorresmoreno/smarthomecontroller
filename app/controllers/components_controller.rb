@@ -19,6 +19,7 @@ class ComponentsController < ApplicationController
 
   # GET /components/1/edit
   def edit
+    @operations = Operation.where("module_id = #{@component.module_id} and state = 1")
   end
 
   # POST /components

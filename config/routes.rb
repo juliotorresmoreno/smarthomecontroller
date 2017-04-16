@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :operations
+  resources :actions
   devise_for :users
   root :to => "home#index"
   get 'about', :to => "home#about"
@@ -23,7 +25,6 @@ Rails.application.routes.draw do
   resources :perfils
   resources :parameters_values
   resources :parameters
-  resources :operations
   resources :locations
   resources :incidences_trackings
   resources :incidences

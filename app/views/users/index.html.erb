@@ -31,8 +31,8 @@
         <td><%= user.email %></td>
         <td><%= user.password %></td>
         <td><%= user.perfil_id %></td>
-        <td><%= user.created_at %></td>
-        <td><%= user.update_at %></td>
+        <td><%= user.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= user.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', user %></td>
         <td><%= link_to 'Editar', edit_user_path(user) %></td>

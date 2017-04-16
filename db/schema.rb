@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 20170413010145) do
 
   create_table "devices", primary_key: "device_id", id: :bigint, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer  "state",       limit: 1,   default: 1,                          null: false
+    t.string   "name",        limit: 100,                                      null: false
+    t.bigint   "user_id",                                                      null: false
     t.bigint   "location_id",                                                  null: false
     t.string   "UUID",        limit: 100,                                      null: false
     t.integer  "state_onoff", limit: 1,                                        null: false
@@ -212,6 +214,7 @@ ActiveRecord::Schema.define(version: 20170413010145) do
     t.time     "time",                                                      null: false
     t.integer  "repetition", limit: 1,                                      null: false
     t.integer  "interval",                                                  null: false
+    t.integer  "duration",                                                  null: false
     t.datetime "created_at",           default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "update_at",            default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "delete_at",                                                 null: false
@@ -280,10 +283,11 @@ ActiveRecord::Schema.define(version: 20170413010145) do
   add_foreign_key "conditions", "schedules", primary_key: "schedule_id", name: "conditions_ibfk_1"
   add_foreign_key "consumptions", "devices", primary_key: "device_id", name: "consumptions_ibfk_1"
   add_foreign_key "devices", "locations", primary_key: "location_id", name: "devices_ibfk_1"
+  add_foreign_key "devices", "users", column: "user_id", primary_key: "user_id", name: "devices_ibfk_2"
   add_foreign_key "incidences", "incidence_type", primary_key: "incidence_type_id", name: "incidences_ibfk_1"
   add_foreign_key "incidences_tracking", "incidences", primary_key: "incidence_id", name: "incidences_tracking_ibfk_2"
   add_foreign_key "incidences_tracking", "users", column: "user_id", primary_key: "id", name: "incidences_tracking_ibfk_1"
-  add_foreign_key "locations", "users_old", column: "user_id", primary_key: "user_id", name: "locations_ibfk_1"
+  add_foreign_key "locations", "users", column: "user_id", primary_key: "user_id", name: "locations_ibfk_1"
   add_foreign_key "parameters_value", "parameters", primary_key: "parameter_id", name: "parameters_value_ibfk_1"
   add_foreign_key "permissions", "actions", column: "accion_id", primary_key: "accion_id", name: "permissions_ibfk_2"
   add_foreign_key "permissions", "users", column: "user_id", primary_key: "id", name: "permissions_ibfk_1"

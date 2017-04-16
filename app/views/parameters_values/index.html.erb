@@ -23,8 +23,8 @@
         
         <td><%= parameters_value.value %></td>
         <td><%= parameters_value.parameter_id %></td>
-        <td><%= parameters_value.created_at %></td>
-        <td><%= parameters_value.update_at %></td>
+        <td><%= parameters_value.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= parameters_value.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', parameters_value %></td>
         <td><%= link_to 'Editar', edit_parameters_value_path(parameters_value) %></td>

@@ -25,8 +25,8 @@
         <td><%= recovery_password.user_id %></td>
         <td><%= recovery_password.token %></td>
         <td><%= recovery_password.progress %></td>
-        <td><%= recovery_password.created_at %></td>
-        <td><%= recovery_password.update_at %></td>
+        <td><%= recovery_password.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= recovery_password.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', recovery_password %></td>
         <td><%= link_to 'Editar', edit_recovery_password_path(recovery_password) %></td>

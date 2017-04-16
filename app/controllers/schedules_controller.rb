@@ -4,6 +4,7 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
+    @repeticion = repeticion
     @schedules = Schedule.all
   end
 
@@ -14,11 +15,13 @@ class SchedulesController < ApplicationController
 
   # GET /schedules/new
   def new
+    @repeticion = repeticion
     @schedule = Schedule.new
   end
 
   # GET /schedules/1/edit
   def edit
+    @repeticion = repeticion
   end
 
   # POST /schedules
@@ -29,7 +32,7 @@ class SchedulesController < ApplicationController
     respond_to do |format|
       if @schedule.save
         format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }
-        format.json { render :show, status: :created, location: @schedule }
+        format.json { render :index, status: :created, location: @schedule }
       else
         format.html { render :new }
         format.json { render json: @schedule.errors, status: :unprocessable_entity }
@@ -41,9 +44,11 @@ class SchedulesController < ApplicationController
   # PATCH/PUT /schedules/1.json
   def update
     respond_to do |format|
-      if @schedule.update(schedule_params)
+      data = schedule_params
+      data[:update_at] = Time.now
+      if @schedule.update(data)
         format.html { redirect_to @schedule, notice: 'Schedule was successfully updated.' }
-        format.json { render :show, status: :ok, location: @schedule }
+        format.json { render :index, status: :ok, location: @schedule }
       else
         format.html { render :edit }
         format.json { render json: @schedule.errors, status: :unprocessable_entity }
@@ -62,6 +67,16 @@ class SchedulesController < ApplicationController
   end
 
   private
+    def repeticion
+      result = [
+        ["Ninguna", 0], 
+        ["Minuto", 1],
+        ["Hora", 2],
+        ["Dia", 3]
+      ]
+      return result
+    end
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_schedule
       @schedule = Schedule.find(params[:id])

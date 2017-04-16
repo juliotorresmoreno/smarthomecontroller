@@ -27,8 +27,8 @@
         <td><%= consumption.date %></td>
         <td><%= consumption.time %></td>
         <td><%= consumption.consumption %></td>
-        <td><%= consumption.created_at %></td>
-        <td><%= consumption.update_at %></td>
+        <td><%= consumption.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= consumption.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
         <td><%= link_to 'Mostrar', consumption %></td>
         <td><%= link_to 'Editar', edit_consumption_path(consumption) %></td>
