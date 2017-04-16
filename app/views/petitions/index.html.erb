@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Petitions</h1>
+<h1>Peticiones</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Petition</th>
+      <th>ID</th>
       
-      <th>User</th>
-      <th>Petition type</th>
-      <th>Title</th>
-      <th>Description</th>
+      <th>Usuario</th>
+      <th>Tipo</th>
+      <th>Titulo</th>
+      <th>Descripcíon</th>
       <th>Creado</th>
       <th>Modificado</th>
       
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -30,7 +30,6 @@
         <td><%= petition.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= petition.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', petition %></td>
         <td><%= link_to 'Editar', edit_petition_path(petition) %></td>
         <td><%= link_to 'Eliminar', petition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -40,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Petition', new_petition_path %>
+<%= link_to 'Nueva petición', new_petition_path %>

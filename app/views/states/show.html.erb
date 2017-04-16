@@ -2,23 +2,18 @@
   <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>State:</strong>
+    <strong>ID:</strong>
     <%= @state.state_id %>
   </p>
 
   <p>
-    <strong>State:</strong>
-    <%= @state.state %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
+    <strong>Nombre:</strong>
     <%= @state.name %>
   </p>
 
   <p>
-    <strong>Country:</strong>
-    <%= @state.country_id %>
+    <strong>Pais:</strong>
+    <%= @state.country.name %>
   </p>
 
   <p>
@@ -29,11 +24,6 @@
   <p>
     <strong>Modificado:</strong>
     <%= @state.update_at %>
-  </p>
-
-  <p>
-    <strong>Delete at:</strong>
-    <%= @state.delete_at %>
   </p>
 
   <%= link_to 'Editar', edit_state_path(@state) %> |

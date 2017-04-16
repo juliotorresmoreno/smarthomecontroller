@@ -45,5 +45,16 @@
   <%= @schedule.update_at %>
 </p>
 
+
+<p>
+  <strong>Creado:</strong>
+  <%= @schedule.created_at %>
+</p>
+
+<p>
+  <strong>Modificado:</strong>
+  <%= @schedule.update_at %>
+</p>
+
 <%= link_to 'Editar', edit_schedule_path(@schedule) %> |
 <%= link_to 'Atras', schedules_path %>

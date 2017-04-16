@@ -1,32 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Consumption:</strong>
+  <strong>ID:</strong>
   <%= @consumption.consumption_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @consumption.state %>
-</p>
-
-<p>
-  <strong>Device:</strong>
+  <strong>Dispositivos:</strong>
   <%= @consumption.device_id %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Fecha:</strong>
   <%= @consumption.date %>
 </p>
 
 <p>
-  <strong>Time:</strong>
+  <strong>Hora:</strong>
   <%= @consumption.time %>
 </p>
 
 <p>
-  <strong>Consumption:</strong>
+  <strong>Consumo:</strong>
   <%= @consumption.consumption %>
 </p>
 
@@ -38,11 +33,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @consumption.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @consumption.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_consumption_path(@consumption) %> |

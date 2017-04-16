@@ -12,48 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :petition_id %>
-    <%= f.number_field :petition_id %>
+    <%= f.label :petition_id, "ID" %>
+    <%= f.number_field :petition_id, class: "form-control", readonly: true %>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
-    <%= f.number_field :state %>
+    <%= f.label :petition_type_id, "Tipo" %>
+    <%= f.select :petition_type_id, options_for_select(PetitionType.all), {}, class:"form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
+    <%= f.label :title, "Titulo" %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :petition_type_id %>
-    <%= f.number_field :petition_type_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :created_at %>
-    <%= f.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :update_at %>
-    <%= f.datetime_select :update_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :delete_at %>
-    <%= f.datetime_select :delete_at %>
+    <%= f.label :description, "Descripción" %>
+    <%= f.text_area :description, :class => "form-control" %>
   </div>
 
   <div class="actions">

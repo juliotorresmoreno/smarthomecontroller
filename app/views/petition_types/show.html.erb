@@ -1,17 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Petition type:</strong>
+  <strong>ID:</strong>
   <%= @petition_type.petition_type_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @petition_type.state %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @petition_type.name %>
 </p>
 
@@ -23,11 +18,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @petition_type.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @petition_type.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_petition_type_path(@petition_type) %> |

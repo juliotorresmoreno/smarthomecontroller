@@ -1,13 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Incidence tracking:</strong>
+  <strong>ID:</strong>
   <%= @incidences_tracking.incidence_tracking_id %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @incidences_tracking.state %>
 </p>
 
 <p>
@@ -16,12 +11,12 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Usuario:</strong>
   <%= @incidences_tracking.user_id %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong>Comentario:</strong>
   <%= @incidences_tracking.comment %>
 </p>
 
@@ -33,11 +28,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @incidences_tracking.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @incidences_tracking.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_incidences_tracking_path(@incidences_tracking) %> |

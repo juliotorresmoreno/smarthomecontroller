@@ -1,27 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Petition tracking:</strong>
+  <strong>ID:</strong>
   <%= @petitions_tracking.petition_tracking_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @petitions_tracking.state %>
-</p>
-
-<p>
-  <strong>Petition:</strong>
+  <strong>Petición:</strong>
   <%= @petitions_tracking.petition_id %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Usuario:</strong>
   <%= @petitions_tracking.user_id %>
 </p>
 
 <p>
-  <strong>Comemnt:</strong>
+  <strong>Comentario:</strong>
   <%= @petitions_tracking.comemnt %>
 </p>
 
@@ -33,11 +28,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @petitions_tracking.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @petitions_tracking.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_petitions_tracking_path(@petitions_tracking) %> |

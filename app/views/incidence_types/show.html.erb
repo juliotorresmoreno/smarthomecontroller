@@ -1,17 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Incidence type:</strong>
+  <strong>ID:</strong>
   <%= @incidence_type.incidence_type_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @incidence_type.state %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @incidence_type.name %>
 </p>
 
@@ -23,11 +18,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @incidence_type.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @incidence_type.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_incidence_type_path(@incidence_type) %> |

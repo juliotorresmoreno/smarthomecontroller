@@ -1,27 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Condition:</strong>
+  <strong>ID:</strong>
   <%= @condition.condition_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @condition.state %>
-</p>
-
-<p>
-  <strong>Schedule:</strong>
+  <strong>Horario:</strong>
   <%= @condition.schedule_id %>
 </p>
 
 <p>
-  <strong>Condition:</strong>
+  <strong>Condición:</strong>
   <%= @condition.condition %>
 </p>
 
 <p>
-  <strong>Condition type:</strong>
+  <strong>Tipo:</strong>
   <%= @condition.condition_type %>
 </p>
 
@@ -33,11 +28,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @condition.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @condition.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_condition_path(@condition) %> |

@@ -1,22 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Parameter value:</strong>
+  <strong>ID:</strong>
   <%= @parameters_value.parameter_value_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @parameters_value.state %>
-</p>
-
-<p>
-  <strong>Value:</strong>
+  <strong>Valor:</strong>
   <%= @parameters_value.value %>
 </p>
 
 <p>
-  <strong>Parameter:</strong>
+  <strong>Parametr:o</strong>
   <%= @parameters_value.parameter_id %>
 </p>
 
@@ -28,11 +23,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @parameters_value.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @parameters_value.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_parameters_value_path(@parameters_value) %> |

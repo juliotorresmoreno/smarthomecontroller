@@ -1,38 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Accion:</strong>
+  <strong>ID:</strong>
   <%= @operation.accion_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @operation.state %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @operation.name %>
 </p>
 
 <p>
-  <strong>Module:</strong>
+  <strong>Modulo:</strong>
   <%= @operation.module_id %>
 </p>
 
 <p>
-  <strong>Created at:</strong>
+  <strong>Creado:</strong>
   <%= @operation.created_at %>
 </p>
 
 <p>
-  <strong>Update at:</strong>
+  <strong>Modificado:</strong>
   <%= @operation.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @operation.delete_at %>
 </p>
 
 <%= link_to 'Edit', edit_operation_path(@operation) %> |

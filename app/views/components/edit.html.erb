@@ -1,12 +1,7 @@
 <h1>Editar modulo</h1>
 
 
-<div class="row">
-  <div class="col-sm-6 col-md-4">
+<div class="container form-signin">
     <%= render 'form', component: @component %>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <%= render 'operation/index', operations: @operations %>
-  </div>
+    <%= link_to 'Atras', components_path %>
 </div>
-<%= link_to 'Atras', components_path %>

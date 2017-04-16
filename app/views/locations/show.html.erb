@@ -10,6 +10,15 @@
   <%= @location.name %>
 </p>
 
+<p>
+  <strong>Creado:</strong>
+  <%= @location.created_at %>
+</p>
+
+<p>
+  <strong>Modificado:</strong>
+  <%= @location.update_at %>
+</p>
 
 <%= link_to 'Editar', edit_location_path(@location) %> |
 <%= link_to 'Atras', locations_path %>

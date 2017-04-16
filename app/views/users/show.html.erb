@@ -1,38 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>ID:</strong>
   <%= @user.user_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @user.state %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nombres:</strong>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Apellidos:</strong>
   <%= @user.lastname %>
-</p>
-
-<p>
-  <strong>Fullname:</strong>
-  <%= @user.fullname %>
 </p>
 
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
 </p>
 
 <p>
@@ -48,11 +33,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @user.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @user.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_user_path(@user) %> |

@@ -1,17 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Module:</strong>
+  <strong>ID:</strong>
   <%= @component.module_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @component.state %>
-</p>
-
-<p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @component.name %>
 </p>
 
@@ -23,11 +18,6 @@
 <p>
   <strong>Modificado:</strong>
   <%= @component.update_at %>
-</p>
-
-<p>
-  <strong>Delete at:</strong>
-  <%= @component.delete_at %>
 </p>
 
 <%= link_to 'Editar', edit_component_path(@component) %> |
