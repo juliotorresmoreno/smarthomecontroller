@@ -24,7 +24,6 @@
         <td><%= parameter.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= parameter.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', parameter %></td>
         <td><%= link_to 'Editar', edit_parameter_path(parameter) %></td>
         <td><%= link_to 'Eliminar', parameter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -36,7 +36,6 @@
         <td><%= users_desc.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= users_desc.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', users_desc %></td>
         <td><%= link_to 'Editar', edit_users_desc_path(users_desc) %></td>
         <td><%= link_to 'Eliminar', users_desc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

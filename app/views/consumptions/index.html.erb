@@ -30,7 +30,6 @@
         <td><%= consumption.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= consumption.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', consumption %></td>
         <td><%= link_to 'Editar', edit_consumption_path(consumption) %></td>
         <td><%= link_to 'Eliminar', consumption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

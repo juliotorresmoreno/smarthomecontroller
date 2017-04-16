@@ -1,5 +1,6 @@
-<h1>New Recovery Password</h1>
+<h1>Nuevo Recovery Password</h1>
 
-<%= render 'form', recovery_password: @recovery_password %>
-
-<%= link_to 'Atras', recovery_passwords_path %>
+<div class="container form-signin">
+    <%= render 'form', recovery_password: @recovery_password %>
+    <%= link_to 'Atras', recovery_passwords_path %>
+</div>

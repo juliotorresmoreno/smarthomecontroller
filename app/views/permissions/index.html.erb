@@ -26,7 +26,6 @@
         <td><%= permission.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= permission.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', permission %></td>
         <td><%= link_to 'Editar', edit_permission_path(permission) %></td>
         <td><%= link_to 'Eliminar', permission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

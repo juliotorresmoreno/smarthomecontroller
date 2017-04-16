@@ -28,7 +28,6 @@
         <td><%= session.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= session.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', session %></td>
         <td><%= link_to 'Editar', edit_session_path(session) %></td>
         <td><%= link_to 'Eliminar', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -24,7 +24,6 @@
         <td><%= incidence_type.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= incidence_type.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', incidence_type %></td>
         <td><%= link_to 'Editar', edit_incidence_type_path(incidence_type) %></td>
         <td><%= link_to 'Eliminar', incidence_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
