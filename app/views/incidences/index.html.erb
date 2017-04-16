@@ -5,12 +5,12 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Incidence</th>
+      <th>ID</th>
       
-      <th>Title</th>
-      <th>Description</th>
-      <th>Incidence type</th>
-      <th>Progress</th>
+      <th>Titulo</th>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Progreso</th>
       <th>Creado</th>
       <th>Modificado</th>
       
@@ -30,7 +30,6 @@
         <td><%= incidence.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= incidence.update_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %></td>
         
-        <td><%= link_to 'Mostrar', incidence %></td>
         <td><%= link_to 'Editar', edit_incidence_path(incidence) %></td>
         <td><%= link_to 'Eliminar', incidence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -40,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Incidence', new_incidence_path %>
+<%= link_to 'Nueva incidencia', new_incidence_path %>

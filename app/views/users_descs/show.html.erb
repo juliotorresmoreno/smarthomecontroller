@@ -42,7 +42,7 @@
 
 <p>
   <strong>Creado:</strong>
-  <%= @users_desc.created_at %>
+  <%= @users_desc.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %>
 </p>
 
 <p>

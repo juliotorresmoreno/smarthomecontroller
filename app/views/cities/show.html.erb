@@ -19,7 +19,7 @@
 
   <p>
     <strong>Creado:</strong>
-    <%= @city.created_at %>
+    <%= @city.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %>
   </p>
 
   <p>

@@ -12,51 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :incidence_id %>
-    <%= f.number_field :incidence_id %>
+    <%= f.label :incidence_id, "ID" %>
+    <%= f.number_field :incidence_id, class: 'form-control', readonly: true %>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
-    <%= f.number_field :state %>
+    <%= f.label :title, "Titulo" %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :description, "Descripción" %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.label :incidence_type_id, "Tipo" %>
+    <%= f.number_field :incidence_type_id, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :incidence_type_id %>
-    <%= f.number_field :incidence_type_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :progress %>
-    <%= f.text_field :progress %>
-  </div>
-
-  <div class="field">
-    <%= f.label :created_at %>
-    <%= f.datetime_select :created_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :update_at %>
-    <%= f.datetime_select :update_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :delete_at %>
-    <%= f.datetime_select :delete_at %>
+    <%= f.label :progress, "Progreso" %>
+    <%= f.text_field :progress, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'submit', :class => 'btn btn-success' %>
+    <%= f.submit 'submit', class: 'btn btn-success' %>
   </div>
 <% end %>

@@ -22,7 +22,7 @@
 
 <p>
   <strong>Creado:</strong>
-  <%= @condition.created_at %>
+  <%= @condition.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %>
 </p>
 
 <p>

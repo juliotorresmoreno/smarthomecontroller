@@ -22,7 +22,7 @@
 
 <p>
   <strong>Creado:</strong>
-  <%= @incidences_tracking.created_at %>
+  <%= @incidences_tracking.created_at.in_time_zone("Bogota").strftime("%Y-%m-%d %H:%M") %>
 </p>
 
 <p>
