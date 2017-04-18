@@ -28,12 +28,14 @@
 
   <div class="field">
     <%= f.label :incidence_type_id, "Tipo" %>
-    <%= f.number_field :incidence_type_id, class: 'form-control' %>
+    <%= f.select :incidence_type_id, 
+          options_from_collection_for_select(IncidenceType.all, :id, :name, @incidence.incidence_type_id), {}, 
+          {:class => "form-control"} %>
   </div>
 
   <div class="field">
     <%= f.label :progress, "Progreso" %>
-    <%= f.text_field :progress, class: 'form-control' %>
+    <%= f.select :progress, options_for_select(@progresos), {}, class:"form-control" %>
   </div>
 
   <div class="actions">

@@ -14,17 +14,21 @@ class IncidencesController < ApplicationController
 
   # GET /incidences/new
   def new
+    @progresos = progresos
     @incidence = Incidence.new
   end
 
   # GET /incidences/1/edit
   def edit
+    @progresos = progresos
   end
 
   # POST /incidences
   # POST /incidences.json
   def create
-    @incidence = Incidence.new(incidence_params)
+    data = incidence_params
+    data[:user_id] = current_user.id
+    @incidence = Incidence.new(data)
 
     respond_to do |format|
       if @incidence.save
@@ -62,6 +66,14 @@ class IncidencesController < ApplicationController
   end
 
   private
+    def progresos
+      return [
+        ["Abierto", "open"],
+        ["En revision", "review"],
+        ["Finalizado", "finished"],
+        ["Cerrado", "close"]
+      ]
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_incidence
       @incidence = Incidence.find(params[:id])
@@ -69,6 +81,6 @@ class IncidencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def incidence_params
-      params.require(:incidence).permit(:incidence_id, :state, :title, :description, :incidence_type_id, :progress, :created_at, :update_at, :delete_at)
+      return params.require(:incidence).permit(:state, :title, :description, :incidence_type_id, :progress)
     end
 end
