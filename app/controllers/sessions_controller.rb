@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
 
     respond_to do |format|
       if @session.save
-        format.html { redirect_to @session, notice: 'Session was successfully created.' }
+        format.html { redirect_to @session, notice: 'Session ha sido creado.' }
         format.json { render :show, status: :created, location: @session }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class SessionsController < ApplicationController
   def update
     respond_to do |format|
       if @session.update(session_params)
-        format.html { redirect_to @session, notice: 'Session was successfully updated.' }
+        format.html { redirect_to @session, notice: 'Session ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @session }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SessionsController < ApplicationController
   def destroy
     @session.destroy
     respond_to do |format|
-      format.html { redirect_to sessions_url, notice: 'Session was successfully destroyed.' }
+      format.html { redirect_to sessions_url, notice: 'Session ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class SessionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def session_params
-      params.require(:session).permit(:session_id, :state, :user_id, :token, :expires, :created_at, :update_at, :delete_at)
+      params.require(:session).permit(:session_id, :state, :user_id, :token, :expires)
     end
 end

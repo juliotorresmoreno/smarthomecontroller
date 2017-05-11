@@ -28,7 +28,7 @@ class StatesController < ApplicationController
 
     respond_to do |format|
       if @state.save
-        format.html { redirect_to @state, notice: 'State was successfully created.' }
+        format.html { redirect_to @state, notice: 'State ha sido creado.' }
         format.json { render :show, status: :created, location: @state }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class StatesController < ApplicationController
   def update
     respond_to do |format|
       if @state.update(state_params)
-        format.html { redirect_to @state, notice: 'State was successfully updated.' }
+        format.html { redirect_to @state, notice: 'State ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @state }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class StatesController < ApplicationController
   def destroy
     @state.destroy
     respond_to do |format|
-      format.html { redirect_to states_url, notice: 'State was successfully destroyed.' }
+      format.html { redirect_to states_url, notice: 'State ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class StatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def state_params
-      params.require(:state).permit(:state_id, :state, :name, :country_id, :created_at, :update_at, :delete_at)
+      params.require(:state).permit(:state_id, :state, :name, :country_id)
     end
 end

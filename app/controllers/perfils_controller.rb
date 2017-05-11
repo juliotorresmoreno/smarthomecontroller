@@ -28,7 +28,7 @@ class PerfilsController < ApplicationController
 
     respond_to do |format|
       if @perfil.save
-        format.html { redirect_to @perfil, notice: 'Perfil was successfully created.' }
+        format.html { redirect_to @perfil, notice: 'Perfil ha sido creado.' }
         format.json { render :show, status: :created, location: @perfil }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PerfilsController < ApplicationController
   def update
     respond_to do |format|
       if @perfil.update(perfil_params)
-        format.html { redirect_to @perfil, notice: 'Perfil was successfully updated.' }
+        format.html { redirect_to @perfil, notice: 'Perfil ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @perfil }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PerfilsController < ApplicationController
   def destroy
     @perfil.destroy
     respond_to do |format|
-      format.html { redirect_to perfils_url, notice: 'Perfil was successfully destroyed.' }
+      format.html { redirect_to perfils_url, notice: 'Perfil ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class PerfilsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def perfil_params
-      params.require(:perfil).permit(:perfil_id, :state, :name, :created_at, :update_at, :delete_at)
+      params.require(:perfil).permit(:perfil_id, :state, :name)
     end
 end

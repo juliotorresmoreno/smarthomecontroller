@@ -28,7 +28,7 @@ class OperationsController < ApplicationController
 
     respond_to do |format|
       if @operation.save
-        format.html { redirect_to @operation, notice: 'Operation was successfully created.' }
+        format.html { redirect_to @operation, notice: 'Operation ha sido creado.' }
         format.json { render :show, status: :created, location: @operation }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class OperationsController < ApplicationController
   def update
     respond_to do |format|
       if @operation.update(operation_params)
-        format.html { redirect_to @operation, notice: 'Operation was successfully updated.' }
+        format.html { redirect_to @operation, notice: 'Operation ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @operation }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class OperationsController < ApplicationController
   def destroy
     @operation.destroy
     respond_to do |format|
-      format.html { redirect_to operations_url, notice: 'Operation was successfully destroyed.' }
+      format.html { redirect_to operations_url, notice: 'Operation ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class OperationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def operation_params
-      params.require(:operation).permit(:accion_id, :state, :name, :module_id, :created_at, :update_at, :delete_at)
+      params.require(:operation).permit(:accion_id, :state, :name, :module_id)
     end
 end

@@ -32,7 +32,7 @@ class IncidencesController < ApplicationController
 
     respond_to do |format|
       if @incidence.save
-        format.html { redirect_to @incidence, notice: 'Incidence was successfully created.' }
+        format.html { redirect_to @incidence, notice: 'Incidence ha sido creado.' }
         format.json { render :show, status: :created, location: @incidence }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class IncidencesController < ApplicationController
   def update
     respond_to do |format|
       if @incidence.update(incidence_params)
-        format.html { redirect_to @incidence, notice: 'Incidence was successfully updated.' }
+        format.html { redirect_to @incidence, notice: 'Incidence ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @incidence }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class IncidencesController < ApplicationController
   def destroy
     @incidence.destroy
     respond_to do |format|
-      format.html { redirect_to incidences_url, notice: 'Incidence was successfully destroyed.' }
+      format.html { redirect_to incidences_url, notice: 'Incidence ha sido eliminado.' }
       format.json { head :no_content }
     end
   end

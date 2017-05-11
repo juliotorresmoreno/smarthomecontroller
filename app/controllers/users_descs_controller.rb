@@ -28,7 +28,7 @@ class UsersDescsController < ApplicationController
 
     respond_to do |format|
       if @users_desc.save
-        format.html { redirect_to @users_desc, notice: 'Users desc was successfully created.' }
+        format.html { redirect_to @users_desc, notice: 'Users desc ha sido creado.' }
         format.json { render :show, status: :created, location: @users_desc }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class UsersDescsController < ApplicationController
   def update
     respond_to do |format|
       if @users_desc.update(users_desc_params)
-        format.html { redirect_to @users_desc, notice: 'Users desc was successfully updated.' }
+        format.html { redirect_to @users_desc, notice: 'Users desc ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @users_desc }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class UsersDescsController < ApplicationController
   def destroy
     @users_desc.destroy
     respond_to do |format|
-      format.html { redirect_to users_descs_url, notice: 'Users desc was successfully destroyed.' }
+      format.html { redirect_to users_descs_url, notice: 'Users desc ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class UsersDescsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def users_desc_params
-      params.require(:users_desc).permit(:user_desc_id, :state, :sex_id, :city_residence_id, :phone, :address, :cell_phone, :birth_date, :user_id, :created_at, :update_at, :delete_at)
+      params.require(:users_desc).permit(:user_desc_id, :state, :sex_id, :city_residence_id, :phone, :address, :cell_phone, :birth_date, :user_id)
     end
 end

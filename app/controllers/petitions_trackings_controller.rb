@@ -28,7 +28,7 @@ class PetitionsTrackingsController < ApplicationController
 
     respond_to do |format|
       if @petitions_tracking.save
-        format.html { redirect_to @petitions_tracking, notice: 'Petitions tracking was successfully created.' }
+        format.html { redirect_to @petitions_tracking, notice: 'Petitions tracking ha sido creado.' }
         format.json { render :show, status: :created, location: @petitions_tracking }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PetitionsTrackingsController < ApplicationController
   def update
     respond_to do |format|
       if @petitions_tracking.update(petitions_tracking_params)
-        format.html { redirect_to @petitions_tracking, notice: 'Petitions tracking was successfully updated.' }
+        format.html { redirect_to @petitions_tracking, notice: 'Petitions tracking ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @petitions_tracking }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PetitionsTrackingsController < ApplicationController
   def destroy
     @petitions_tracking.destroy
     respond_to do |format|
-      format.html { redirect_to petitions_trackings_url, notice: 'Petitions tracking was successfully destroyed.' }
+      format.html { redirect_to petitions_trackings_url, notice: 'Petitions tracking ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class PetitionsTrackingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def petitions_tracking_params
-      params.require(:petitions_tracking).permit(:petition_tracking_id, :state, :petition_id, :user_id, :comemnt, :created_at, :update_at, :delete_at)
+      params.require(:petitions_tracking).permit(:petition_tracking_id, :state, :petition_id, :user_id, :comemnt)
     end
 end

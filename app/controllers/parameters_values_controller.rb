@@ -28,7 +28,7 @@ class ParametersValuesController < ApplicationController
 
     respond_to do |format|
       if @parameters_value.save
-        format.html { redirect_to @parameters_value, notice: 'Parameters value was successfully created.' }
+        format.html { redirect_to @parameters_value, notice: 'Parameters value ha sido creado.' }
         format.json { render :show, status: :created, location: @parameters_value }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ParametersValuesController < ApplicationController
   def update
     respond_to do |format|
       if @parameters_value.update(parameters_value_params)
-        format.html { redirect_to @parameters_value, notice: 'Parameters value was successfully updated.' }
+        format.html { redirect_to @parameters_value, notice: 'Parameters value ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @parameters_value }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ParametersValuesController < ApplicationController
   def destroy
     @parameters_value.destroy
     respond_to do |format|
-      format.html { redirect_to parameters_values_url, notice: 'Parameters value was successfully destroyed.' }
+      format.html { redirect_to parameters_values_url, notice: 'Parameters value ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ParametersValuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parameters_value_params
-      params.require(:parameters_value).permit(:parameter_value_id, :state, :value, :parameter_id, :created_at, :update_at, :delete_at)
+      params.require(:parameters_value).permit(:parameter_value_id, :state, :value, :parameter_id)
     end
 end

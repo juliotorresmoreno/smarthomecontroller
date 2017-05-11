@@ -28,7 +28,7 @@ class ConsumptionsController < ApplicationController
 
     respond_to do |format|
       if @consumption.save
-        format.html { redirect_to @consumption, notice: 'Consumption was successfully created.' }
+        format.html { redirect_to @consumption, notice: 'Consumption ha sido creado.' }
         format.json { render :show, status: :created, location: @consumption }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ConsumptionsController < ApplicationController
   def update
     respond_to do |format|
       if @consumption.update(consumption_params)
-        format.html { redirect_to @consumption, notice: 'Consumption was successfully updated.' }
+        format.html { redirect_to @consumption, notice: 'Consumption ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @consumption }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ConsumptionsController < ApplicationController
   def destroy
     @consumption.destroy
     respond_to do |format|
-      format.html { redirect_to consumptions_url, notice: 'Consumption was successfully destroyed.' }
+      format.html { redirect_to consumptions_url, notice: 'Consumption ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ConsumptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def consumption_params
-      params.require(:consumption).permit(:consumption_id, :state, :device_id, :date, :time, :consumption, :created_at, :update_at, :delete_at)
+      params.require(:consumption).permit(:consumption_id, :state, :device_id, :date, :time, :consumption)
     end
 end

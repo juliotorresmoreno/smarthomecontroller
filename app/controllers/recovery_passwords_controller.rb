@@ -28,7 +28,7 @@ class RecoveryPasswordsController < ApplicationController
 
     respond_to do |format|
       if @recovery_password.save
-        format.html { redirect_to @recovery_password, notice: 'Recovery password was successfully created.' }
+        format.html { redirect_to @recovery_password, notice: 'Recovery password ha sido creado.' }
         format.json { render :show, status: :created, location: @recovery_password }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RecoveryPasswordsController < ApplicationController
   def update
     respond_to do |format|
       if @recovery_password.update(recovery_password_params)
-        format.html { redirect_to @recovery_password, notice: 'Recovery password was successfully updated.' }
+        format.html { redirect_to @recovery_password, notice: 'Recovery password ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @recovery_password }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RecoveryPasswordsController < ApplicationController
   def destroy
     @recovery_password.destroy
     respond_to do |format|
-      format.html { redirect_to recovery_passwords_url, notice: 'Recovery password was successfully destroyed.' }
+      format.html { redirect_to recovery_passwords_url, notice: 'Recovery password ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class RecoveryPasswordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recovery_password_params
-      params.require(:recovery_password).permit(:recovery_password_id, :state, :user_id, :token, :progress, :created_at, :update_at, :delete_at)
+      params.require(:recovery_password).permit(:recovery_password_id, :state, :user_id, :token, :progress)
     end
 end

@@ -31,7 +31,7 @@ class SchedulesController < ApplicationController
 
     respond_to do |format|
       if @schedule.save
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }
+        format.html { redirect_to @schedule, notice: 'Schedule ha sido creado.' }
         format.json { render :index, status: :created, location: @schedule }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class SchedulesController < ApplicationController
       data = schedule_params
       data[:update_at] = Time.now
       if @schedule.update(data)
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully updated.' }
+        format.html { redirect_to @schedule, notice: 'Schedule ha sido actualizado.' }
         format.json { render :index, status: :ok, location: @schedule }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class SchedulesController < ApplicationController
   def destroy
     @schedule.destroy
     respond_to do |format|
-      format.html { redirect_to schedules_url, notice: 'Schedule was successfully destroyed.' }
+      format.html { redirect_to schedules_url, notice: 'Schedule ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -84,6 +84,6 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.require(:schedule).permit(:schedule_id, :state, :device_id, :date, :time, :repetition, :interval, :created_at, :update_at, :delete_at)
+      params.require(:schedule).permit(:schedule_id, :state, :device_id, :date, :time, :repetition, :interval)
     end
 end

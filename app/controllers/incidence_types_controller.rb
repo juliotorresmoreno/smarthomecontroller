@@ -28,7 +28,7 @@ class IncidenceTypesController < ApplicationController
 
     respond_to do |format|
       if @incidence_type.save
-        format.html { redirect_to @incidence_type, notice: 'Incidence type was successfully created.' }
+        format.html { redirect_to @incidence_type, notice: 'Incidence type ha sido creado.' }
         format.json { render :show, status: :created, location: @incidence_type }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class IncidenceTypesController < ApplicationController
   def update
     respond_to do |format|
       if @incidence_type.update(incidence_type_params)
-        format.html { redirect_to @incidence_type, notice: 'Incidence type was successfully updated.' }
+        format.html { redirect_to @incidence_type, notice: 'Incidence type ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @incidence_type }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class IncidenceTypesController < ApplicationController
   def destroy
     @incidence_type.destroy
     respond_to do |format|
-      format.html { redirect_to incidence_types_url, notice: 'Incidence type was successfully destroyed.' }
+      format.html { redirect_to incidence_types_url, notice: 'Incidence type ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class IncidenceTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def incidence_type_params
-      params.require(:incidence_type).permit(:incidence_type_id, :state, :name, :created_at, :update_at, :delete_at)
+      params.require(:incidence_type).permit(:incidence_type_id, :state, :name)
     end
 end

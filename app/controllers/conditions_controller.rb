@@ -28,7 +28,7 @@ class ConditionsController < ApplicationController
 
     respond_to do |format|
       if @condition.save
-        format.html { redirect_to @condition, notice: 'Condition was successfully created.' }
+        format.html { redirect_to @condition, notice: 'Condition ha sido creado.' }
         format.json { render :show, status: :created, location: @condition }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ConditionsController < ApplicationController
   def update
     respond_to do |format|
       if @condition.update(condition_params)
-        format.html { redirect_to @condition, notice: 'Condition was successfully updated.' }
+        format.html { redirect_to @condition, notice: 'Condition ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @condition }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ConditionsController < ApplicationController
   def destroy
     @condition.destroy
     respond_to do |format|
-      format.html { redirect_to conditions_url, notice: 'Condition was successfully destroyed.' }
+      format.html { redirect_to conditions_url, notice: 'Condition ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ConditionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def condition_params
-      params.require(:condition).permit(:condition_id, :state, :schedule_id, :condition, :condition_type, :created_at, :update_at, :delete_at)
+      params.require(:condition).permit(:condition_id, :state, :schedule_id, :condition, :condition_type)
     end
 end

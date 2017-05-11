@@ -28,7 +28,7 @@ class PetitionsController < ApplicationController
 
     respond_to do |format|
       if @petition.save
-        format.html { redirect_to @petition, notice: 'Petition was successfully created.' }
+        format.html { redirect_to @petition, notice: 'Petition ha sido creado.' }
         format.json { render :show, status: :created, location: @petition }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PetitionsController < ApplicationController
   def update
     respond_to do |format|
       if @petition.update(petition_params)
-        format.html { redirect_to @petition, notice: 'Petition was successfully updated.' }
+        format.html { redirect_to @petition, notice: 'Petition ha sido actualizado.' }
         format.json { render :show, status: :ok, location: @petition }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PetitionsController < ApplicationController
   def destroy
     @petition.destroy
     respond_to do |format|
-      format.html { redirect_to petitions_url, notice: 'Petition was successfully destroyed.' }
+      format.html { redirect_to petitions_url, notice: 'Petition ha sido eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class PetitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def petition_params
-      params.require(:petition).permit(:petition_id, :state, :user_id, :petition_type_id, :title, :description, :created_at, :update_at, :delete_at)
+      params.require(:petition).permit(:petition_id, :state, :user_id, :petition_type_id, :title, :description)
     end
 end
